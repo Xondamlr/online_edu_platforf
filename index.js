@@ -69,11 +69,11 @@ app.use("/api/", authMiddleware, adminRouter);
 app.use(errorMiddleware);
 
 const port = normalizePort(process.env.PORT || "5000");
-app.set("port", port);
+app.set("PORT", port);
 
 try {
   app.listen(port, () => {
-    console.log(`Server listening on port: `, app.get("port"));
+    console.log(`Server listening on port: `, app.get("PORT"));
   });
 } catch (error) {
   console.log(error);
